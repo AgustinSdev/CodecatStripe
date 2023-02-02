@@ -1,0 +1,143 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex-grow: 1;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+}
+img {
+  max-width: 100%;
+}
+/* icono menu */
+.toggle-menu {
+  width: 54px;
+  position: absolute;
+  top: 0.6rem;
+  right: 1rem;
+  z-index: 1;
+}
+/* logotype */
+.main-logo {
+  width: 160px;
+  height: 6rem;
+  top: 0.6rem;
+  display: flex;
+  position: absolute;
+  left: 1rem;
+  font-size: 2.5rem;
+  color: rgba(255, 184, 96, 0.712);
+  font-weight: bold;
+}
+/* nav menu */
+.main-menu {
+  position: absolute;
+  width: 100%;
+  height: 40vh;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  display: flex;
+  background-color: antiquewhite;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  transition: transform 0.7s;
+  transform: translateY(-100%);
+}
+.main-menu__show {
+  transform: translateY(0);
+}
+.main-menu__item {
+  padding: 1rem;
+}
+
+.main-menu__link {
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .main-logo {
+    width: 200px;
+    height: 100px;
+    top: 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: rgba(255, 184, 96, 0.712);
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .toggle-menu {
+    display: none;
+  }
+  .main-menu {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    transform: translateX(0);
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0 0.5rem;
+  }
+  .main-menu__item:hover {
+    background-color: rgba(136, 116, 0, 0.87);
+    border-radius: 40px;
+  }
+  .main-menu__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1rem;
+    font-size: 0.8rem;
+    color: white;
+    padding: 1rem 0.3rem;
+    font-weight: bold;
+  }
+  .main-menu__item {
+    font-size: 0.5rem;
+    padding: 0.5rem;
+    height: 30px;
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .main-menu {
+    height: 160px;
+  }
+  .main-logo {
+    width: 220px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: rgba(255, 184, 96, 0.712);
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+  }
+  .main-menu__link {
+    font-size: 1.2rem;
+    padding: 1rem 0.5rem;
+  }
+}

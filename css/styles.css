@@ -1,0 +1,177 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex-grow: 1;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+}
+h1,
+button,
+.main-menu,
+.main__aboutOurcats {
+  font-family: "Montserrat", sans-serif;
+}
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  padding: 10px;
+  color: rgba(255, 184, 96, 0.712);
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+/* seemore btn */
+.seemore {
+  width: 150px;
+  height: 30px;
+  margin: 1.5rem auto;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.534);
+  color: white;
+  background-color: rgba(253, 215, 165, 0.808);
+  cursor: pointer;
+}
+.seemore:hover {
+  background-color: rgba(136, 116, 0, 0.87);
+}
+
+/* hero */
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 5px 10px;
+  justify-content: center;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("/img/bgtwo.jpg");
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.main-top {
+  color: rgba(88, 49, 0, 0.849);
+}
+
+/* about codeCat */
+.main__about {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  padding: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+.main__about h2 {
+  text-align: end;
+  margin: 0.8rem auto;
+}
+.main__about p {
+  margin: 0.7rem auto;
+  text-align: justify;
+}
+
+/* aboutOurcats */
+.main__aboutOurcats .container {
+  padding: 1rem 2rem;
+  width: 100%;
+  min-height: 240px;
+  color: white;
+  display: flex;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.568),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("/img/aboutOurcats.jpg");
+  background-repeat: no-repeat;
+  background-position: 40% 20%;
+  background-size: cover;
+  margin-bottom: 1rem;
+}
+.bg {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.main__aboutOurcats h2 {
+  text-align: end;
+  margin: 1.5rem 1rem;
+  font-size: 1.5rem;
+}
+.main__aboutOurcats p {
+  font-size: 1rem;
+  color: white;
+  text-align: justify;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 0;
+  background-color: rgba(31, 31, 31);
+}
+footer p {
+  font-size: 1.5rem;
+  margin: 0;
+  color: white;
+  padding: 1rem;
+}
+footer .container {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* desktop */
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .main__aboutOurcats .container {
+    background-size: cover;
+    height: 400px;
+    background-position: 0%;
+  }
+  .main__aboutOurcats h2 {
+    text-align: end;
+    margin: 1.5rem 1rem;
+    font-size: 1.5rem;
+  }
+  .main__aboutOurcats p {
+    font-size: 1.2rem;
+  }
+  .seemore {
+    width: 200px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
